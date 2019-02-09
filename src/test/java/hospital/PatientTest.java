@@ -11,7 +11,7 @@ public class PatientTest {
 	
 	@Before
 	public void setup() {
-	underTest = new Patient("Betty", "001");
+	underTest = new Patient("Betty", "001", 0, 0);
 	}
 	
 	@Test

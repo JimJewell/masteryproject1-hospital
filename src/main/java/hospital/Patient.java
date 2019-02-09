@@ -8,9 +8,10 @@ public class Patient {
 	private String id;
 
 //	Patient Constructor
-	public Patient(String name, String id) {
+	public Patient(String name, String id, int BLOOD_LEVEL, int HEALTH_LEVEL) {
 		this.name = name;
 		this.id = id;
+
 	}
 
 	public static int getBloodLevel() {

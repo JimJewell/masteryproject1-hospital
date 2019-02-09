@@ -5,9 +5,8 @@ import org.junit.Before;
 public class NurseTest {
 
 	
-	public NurseTest() {
-		// TODO Auto-generated constructor stub
-	}
+	
+	
 	Nurse underTest;
 	@Before
 	public void setup() {
