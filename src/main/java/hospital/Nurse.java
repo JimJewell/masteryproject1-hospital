@@ -1,8 +1,6 @@
 package hospital;
 
-import java.util.ArrayList;
-
-public class Nurse extends Employee {
+public class Nurse extends Employee implements CanCareForPatient, CanDrawBlood {
 
 	String nursePay = "$50,000";
 
@@ -21,5 +19,17 @@ public class Nurse extends Employee {
 //	ArrayList<Patient> assignedPatients = new ArrayList<Patient>();
 //	assignedPatients.add(p1)
 //	assignedPatients.add(p2);
+
+	@Override
+	public void drawBlood(Patient patient) {
+		patient.decreaseBloodLevelByFive();
+		
+	}
+
+	@Override
+	public void careForPatient() {
+		// TODO Auto-generated method stub
+		
+	}
 }
 

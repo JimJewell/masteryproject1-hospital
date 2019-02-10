@@ -22,7 +22,7 @@ public class Doctor extends Employee implements CanCareForPatient, CanDrawBlood 
 	}
 
 	@Override
-	public void drawBlood() {
+	public void drawBlood(Patient patient) {
 		
 		
 	}

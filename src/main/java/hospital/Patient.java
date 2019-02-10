@@ -48,7 +48,14 @@ public class Patient {
 
 	public void decreaseBloodLevelByFive() {
 		this.patientBlood -= 5;
+	}
+	
+	public void deathByVampire() {
+		this.patientBlood = 0;
+		this.patientHealth = 0;
+	
+	}
 		
 	}
 	
-}
+
