@@ -7,7 +7,7 @@ public class Application {
 	}
 	public static void main(String[] args) {
 		Surgeon jerry = new Surgeon("Jerry", "888", false);
-		Patient bob = new Patient("Bob", "002");
+		Patient bob = new Patient("Bob", "002", 20, 10);
 		jerry.toggleSurgery();
 		System.out.println(jerry.getName() + " is performing surgery? " + jerry.getPerformingSurgery());
 		

@@ -1,8 +1,8 @@
 package hospital;
 
-public class Doctor extends Employee {
+public class Doctor extends Employee implements CanCareForPatient, CanDrawBlood {
 
-	private String pay = "$90,000";
+	private String doctorPay = "$90,000";
 	private String specialty;
 	
 	public Doctor(String name, String id, String specialty) {
@@ -14,11 +14,23 @@ public class Doctor extends Employee {
 	@Override
 	public String calculatePay() {
 		// TODO Auto-generated method stub
-		return pay;
+		return doctorPay;
 	}
 
 	public String getSpecialty() {
 		return specialty;
+	}
+
+	@Override
+	public void drawBlood() {
+		
+		
+	}
+
+	@Override
+	public void careForPatient() {
+		
+		
 	}
 
 }
