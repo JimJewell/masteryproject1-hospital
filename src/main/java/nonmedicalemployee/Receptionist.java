@@ -1,4 +1,6 @@
-package hospital;
+package nonmedicalemployee;
+
+import employeesuper.Employee;
 
 public class Receptionist extends Employee {
 

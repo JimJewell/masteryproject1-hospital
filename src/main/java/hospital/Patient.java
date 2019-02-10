@@ -55,6 +55,18 @@ public class Patient {
 		this.patientHealth = 0;
 	
 	}
+	
+	@Override
+	public String toString() {
+		return "Patient " + getPatientName() + ", Patient ID: " + getPatientID() + ", Blood Volume: " + getBloodLevel() + ", Overall Health: " + getHealthLevel();
+		
+	}
+
+	public void healToFullHealth() {
+		this.patientHealth = 10;
+	    
+		
+	}
 		
 	}
 	

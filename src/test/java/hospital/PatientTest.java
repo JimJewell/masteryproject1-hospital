@@ -54,4 +54,10 @@ public class PatientTest {
 		int bloodLevelAfter = underTest.getBloodLevel();
 		assertEquals(bloodLevelBefore - 5, bloodLevelAfter);
 		}
+	@Test
+	public void shouldReturnHealthToTen() {
+		underTest.healToFullHealth();
+		int healthAfterCare = underTest.getHealthLevel();
+		assertEquals(10, healthAfterCare);
+	}
 }
