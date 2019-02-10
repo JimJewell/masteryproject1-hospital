@@ -3,8 +3,11 @@ package hospital;
 import java.util.Collection;
 import java.util.HashMap;
 
+
 public class Hospital {
 
+	private int cleanliness = 100;
+	
 	private HashMap<String, Patient> patientsInHospital = new HashMap<String, Patient>();
 	private HashMap<String, Employee> employeesInHospital = new HashMap<String, Employee>();
 
@@ -26,8 +29,8 @@ public class Hospital {
 
 	}
 
-	public Patient findPatient(String patientName) {
-		return patientsInHospital.get(patientName);
+	public Patient getPatient(String patientID) {
+		return patientsInHospital.get(patientID);
 
 	}
 
@@ -38,6 +41,24 @@ public class Hospital {
 	public void removePatient(Patient person) {
 		patientsInHospital.remove(person.getPatientID(), person);
 
+	}
+
+	public int getCleanliness() {
+		if (cleanliness < 0) {
+			cleanliness = 0;
+		}
+		return cleanliness;
+	}
+
+	public void sanitizeHospital() {
+		cleanliness = 100;
+		
+	}
+
+	public void dirtyHospital(int turnCount) {
+		if (turnCount % 5 == 0)
+			cleanliness -= 5;
+		
 	}
 	
 	
