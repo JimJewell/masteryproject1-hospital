@@ -1,9 +1,11 @@
-package hospital;
+package medicalemployeetest;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import medicalemployees.Doctor;
 
 public class DoctorTest {
 

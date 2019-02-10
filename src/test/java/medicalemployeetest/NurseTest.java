@@ -1,6 +1,8 @@
-package hospital;
+package medicalemployeetest;
 
 import org.junit.Before;
+
+import medicalemployees.Nurse;
 
 public class NurseTest {
 

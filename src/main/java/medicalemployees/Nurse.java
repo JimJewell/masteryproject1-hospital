@@ -1,4 +1,7 @@
-package hospital;
+package medicalemployees;
+
+import employeesuper.Employee;
+import hospital.Patient;
 
 public class Nurse extends Employee implements CanCareForPatient, CanDrawBlood {
 

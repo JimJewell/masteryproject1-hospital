@@ -1,4 +1,8 @@
-package hospital;
+package nonmedicalemployee;
+
+import employeesuper.Employee;
+import hospital.Patient;
+import medicalemployees.CanDrawBlood;
 
 public class VampireJanitor extends Employee implements CanSweep, CanDrawBlood {
 

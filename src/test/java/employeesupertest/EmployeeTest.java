@@ -1,9 +1,12 @@
-package hospital;
+package employeesupertest;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import employeesuper.Employee;
+import medicalemployees.Surgeon;
 
 public class EmployeeTest {
 
@@ -11,7 +14,7 @@ public class EmployeeTest {
 
 	@Before
 	public void setup() {
-		underTest = new Surgeon("Jack", "123", false);
+		underTest = new Surgeon("Dr. Facelift", "123", "Plastic Surgeon", false);
 	}
 
 	@Test
