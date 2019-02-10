@@ -3,14 +3,14 @@ package medicalemployees;
 import employeesuper.Employee;
 import hospital.Patient;
 
-public class Surgeon extends Employee {
+public class Surgeon extends Employee implements CanDrawBlood {
 
 	private String pay = "$120,000";
 	private boolean surgery;
 	private String specialty;
 	
-	public Surgeon(String name, String id, String specialty, boolean surgery) {
-		super(name, id);
+	public Surgeon(String name, String id, String specialty, String job, boolean surgery) {
+		super(name, id, job);
 		this.surgery = false;
 		this.specialty = specialty;
 		}
@@ -35,6 +35,12 @@ public class Surgeon extends Employee {
 	
 	public void repairPatient(Patient patient){
 		patient.healToFullHealth();
+		
+	}
+
+	@Override
+	public void drawBlood(Patient patient) {
+		patient.decreaseBloodLevelByFive();
 		
 	}
 

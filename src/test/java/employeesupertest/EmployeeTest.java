@@ -14,13 +14,13 @@ public class EmployeeTest {
 
 	@Before
 	public void setup() {
-		underTest = new Surgeon("Dr. Facelift", "123", "Plastic Surgeon", false);
+		underTest = new Surgeon("Dr. Facelift", "123", "Plastic", "Surgeon", false);
 	}
 
 	@Test
 	public void shouldHaveName() {
 		String actual = underTest.getName();
-		assertEquals("Jack", actual);
+		assertEquals("Dr. Facelift", actual);
 	}
 
 	@Test
@@ -28,4 +28,11 @@ public class EmployeeTest {
 		String actual = underTest.getId();
 		assertEquals("123", actual);
 	}
-}
+	@Test 
+	public void shouldHaveJob() {
+		String actual = underTest.getJob();
+		assertEquals("Surgeon", actual);
+	}
+		
+		
+		}

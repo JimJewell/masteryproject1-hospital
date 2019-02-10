@@ -8,8 +8,8 @@ public class Doctor extends Employee implements CanCareForPatient, CanDrawBlood 
 	private String doctorPay = "$90,000";
 	private String specialty;
 	
-	public Doctor(String name, String id, String specialty) {
-		super(name, id);
+	public Doctor(String name, String id, String specialty, String job) {
+		super(name, id, job);
 		this.specialty = specialty;
 	
 	}
@@ -26,13 +26,13 @@ public class Doctor extends Employee implements CanCareForPatient, CanDrawBlood 
 
 	@Override
 	public void drawBlood(Patient patient) {
-		
+		patient.decreaseBloodLevelByFive();
 		
 	}
 
 	@Override
-	public void careForPatient() {
-		
+	public void careForPatient(Patient patient) {
+		patient.increaseHealthbyFive();
 		
 	}
 

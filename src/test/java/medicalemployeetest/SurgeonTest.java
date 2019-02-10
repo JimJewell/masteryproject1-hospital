@@ -15,7 +15,7 @@ Surgeon underTest;
 	
 	@Before
 	public void setup() {
-		underTest = new Surgeon("Dr. Claw", "123", "Cardiac Surgeon", false);
+		underTest = new Surgeon("Dr. Claw", "123", "Cardiac", "Surgeon", false);
 	}
 //	@Test
 //	public void shouldPerformSurgery() {

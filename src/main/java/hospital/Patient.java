@@ -55,6 +55,9 @@ public class Patient {
 		this.patientHealth = 0;
 	
 	}
+	public void increaseHealthbyFive() {
+		this.patientHealth += 5;
+	}
 	
 	@Override
 	public String toString() {

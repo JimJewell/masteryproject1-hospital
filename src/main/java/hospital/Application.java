@@ -14,8 +14,9 @@ public class Application {
 	public static void main(String[] args) {
 		Hospital highStMercy = new Hospital();
 		
-		Surgeon jerry = new Surgeon("Jerry", "888", "Orthopedic Surgeon", false);
-		Nurse n1 = new Nurse("Crachet", "111");
+		Surgeon jerry = new Surgeon("Jerry", "888", "Plastic", "Surgeon", false);
+		Nurse n1 = new Nurse("Sunshine", "444" , "RN");
+	
 		
 		Patient bob = new Patient("Bob", "002", 20, 10);
 		
@@ -23,7 +24,7 @@ public class Application {
 		System.out.println(jerry.getName() + " is performing surgery? " + jerry.getPerformingSurgery());
 		jerry.repairPatient(bob);
 		System.out.println(bob.getPatientName() + " is recovering from surgery ");
-		public Collection<Patient> getPatientList()
+		
 		
 
 	}

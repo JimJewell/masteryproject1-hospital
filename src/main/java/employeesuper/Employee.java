@@ -4,12 +4,13 @@ public abstract class Employee {
 
 	private String name;
 	private String id;
+	private String job;
 
 // Superclass constructor Employee
-	public Employee(String name, String id) {
+	public Employee(String name, String id, String job) {
 		this.name = name;
 		this.id = id;
-
+		this.job = job;
 	}
 
 	public String getId() {
@@ -19,7 +20,19 @@ public abstract class Employee {
 	public String getName() {
 		return name;
 	}
+	public String getJob() {
+		return job;
+	}
 
-	public abstract String calculatePay();
+	public abstract String calculatePay();{
+		
+	}
 
-}
+	public String toString() {
+		return id;
+		
+	}
+
+
+	
+	}

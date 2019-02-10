@@ -7,8 +7,8 @@ public class Nurse extends Employee implements CanCareForPatient, CanDrawBlood {
 
 	String nursePay = "$50,000";
 
-	public Nurse(String name, String id) {
-		super(name, id);
+	public Nurse(String name, String id, String job) {
+		super(name, id, job);
 		
 	}
 
@@ -30,8 +30,8 @@ public class Nurse extends Employee implements CanCareForPatient, CanDrawBlood {
 	}
 
 	@Override
-	public void careForPatient() {
-		// TODO Auto-generated method stub
+	public void careForPatient(Patient patient) {
+		patient.increaseHealthbyFive();
 		
 	}
 }

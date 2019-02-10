@@ -8,8 +8,8 @@ public class VampireJanitor extends Employee implements CanSweep, CanDrawBlood {
 
 	private String pay = "$40,000";
 			
-	public VampireJanitor(String name, String id) {
-		super(name, id);
+	public VampireJanitor(String name, String id, String job) {
+		super(name, id, job);
 	}
 
 	@Override

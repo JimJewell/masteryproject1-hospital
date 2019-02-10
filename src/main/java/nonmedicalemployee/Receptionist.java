@@ -6,8 +6,8 @@ public class Receptionist extends Employee {
 
 	private String receptionistPay = "$45,000";
 	
-	public Receptionist(String name, String id) {
-		super(name, id);
+	public Receptionist(String name, String id, String job) {
+		super(name, id, job);
 		// TODO Auto-generated constructor stub
 	}
 

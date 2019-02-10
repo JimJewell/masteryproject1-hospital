@@ -15,7 +15,7 @@ public class VampireJanitorTest {
 
 	@Before
 	public void setup() {
-		underTest = new VampireJanitor("Count", "666");
+		underTest = new VampireJanitor("Count", "666", "Vampire Janitor");
 
 	}
 

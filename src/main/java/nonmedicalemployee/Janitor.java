@@ -6,8 +6,8 @@ public class Janitor extends Employee implements CanSweep {
 
 	private String pay = "$40,000";
 	
-	public Janitor(String name, String id) {
-		super(name, id);
+	public Janitor(String name, String id, String job) {
+		super(name, id, job);
 	}
 
 	@Override

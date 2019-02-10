@@ -4,17 +4,20 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import employeesuper.Employee;
+import medicalemployees.Doctor;
+
 public class HospitalTest {
 
 	Hospital underTest;
 	Patient person;
-//	Employee oneStaff; cannot exist due to class abstraction
+	Employee employee;
 
 	@Before
 	public void setup() {
 		underTest = new Hospital();
 		person = new Patient("Sam", "001", 10, 5);
-//		oneStaff = new Employee() cannot initiate employee due to class abstract
+		employee = new Doctor("Dr Happy", "145", "Doctor", "Neurology");
 	}
 	@Test
 	public void shouldKnowCleanliness() {
@@ -22,7 +25,7 @@ public class HospitalTest {
 		underTest.dirtyHospital(5);
 //		underTest.sanitizeHospital();
 		int cleanlinessAfter = underTest.getCleanliness();
-		assertEquals(cleanlinessPrior - 5, cleanlinessAfter);
+		assertEquals(cleanlinessPrior - 10, cleanlinessAfter);
 	}
 	@Test
 	public void shouldSanitize() {
@@ -58,9 +61,25 @@ public class HospitalTest {
 
 	@Test
 	public void shouldAddEmployee() {
-		int initialPatients = underTest.getHospitalSize();
-		underTest.addPatient(person);
-		int patientCensus = underTest.getHospitalSize();
-		assertEquals(initialPatients + 1, patientCensus);
+		int initialEmployees = underTest.getStaffSize();
+		underTest.addEmployee(employee);
+		int staffCensus = underTest.getStaffSize();
+		assertEquals(initialEmployees + 1, staffCensus);
 	}
+	@Test
+	public void shouldFindEmployee() {
+		underTest.addEmployee(employee);
+		Employee employee = underTest.getEmployee("145");
+		assertEquals(employee.getId(), "145");
+	}
+	@Test
+	public void shouldRemoveEmployee( ) {
+		underTest.addEmployee(employee);
+		int staffSize = underTest.getStaffSize();
+		underTest.removeEmployee(employee);
+		int staffSizeAfter = underTest.getStaffSize();
+		assertEquals(staffSize - 1, staffSizeAfter);
+				
+	}
+	
 }

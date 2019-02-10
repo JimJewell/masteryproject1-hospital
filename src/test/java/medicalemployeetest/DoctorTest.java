@@ -13,7 +13,7 @@ public class DoctorTest {
 
 	@Before
 	public void setup() {
-		underTest = new Doctor("Dr. Joe", "121", "Cardiac");
+		underTest = new Doctor("Dr. Joe", "121", "Cardiac", "Doctor");
 	}
 	@Test
 	public void shouldHaveSpecialty() {
