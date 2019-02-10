@@ -1,8 +1,6 @@
 package hospital;
 
 import static org.junit.Assert.assertEquals;
-
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,10 +13,24 @@ public class HospitalTest {
 	@Before
 	public void setup() {
 		underTest = new Hospital();
-		person = new Patient("Betty", "001", 10, 5);
+		person = new Patient("Sam", "001", 10, 5);
 //		oneStaff = new Employee() cannot initiate employee due to class abstract
 	}
-
+	@Test
+	public void shouldKnowCleanliness() {
+		int cleanlinessPrior = underTest.getCleanliness();
+		underTest.dirtyHospital(5);
+//		underTest.sanitizeHospital();
+		int cleanlinessAfter = underTest.getCleanliness();
+		assertEquals(cleanlinessPrior - 5, cleanlinessAfter);
+	}
+	@Test
+	public void shouldSanitize() {
+		underTest.dirtyHospital(10);
+		underTest.sanitizeHospital();
+		int cleanlinessAfter = underTest.getCleanliness();
+		assertEquals(100, cleanlinessAfter);
+	}
 	@Test
 	public void shouldAddPatient() {
 		int initialPatients = underTest.getHospitalSize();
@@ -30,8 +42,8 @@ public class HospitalTest {
 	@Test
 	public void shouldFindPatient() {
 		underTest.addPatient(person);
-		Patient foundPatient = underTest.findPatient("Betty");
-		Assert.assertEquals("Betty", foundPatient.getPatientName());
+		Patient person = underTest.getPatient("001");
+		assertEquals(person.getPatientID(), "001");
 	}
 
 	@Test

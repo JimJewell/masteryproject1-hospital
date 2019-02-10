@@ -18,10 +18,9 @@ public class VampireJanitorTest {
 
 	@Test
 	public void shouldBeAbleToSuckBlood() {
-		int bloodLevelBefore = b.getBloodLevel();
 		underTest.drawBlood(b);
 		int bloodLevelAfter = b.getBloodLevel();
-		assertEquals(bloodLevelBefore - 5, bloodLevelAfter);
+		assertEquals(0 , bloodLevelAfter);
 
 	}
 }
