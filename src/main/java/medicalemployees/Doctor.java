@@ -36,4 +36,9 @@ public class Doctor extends Employee implements CanCareForPatient, CanDrawBlood 
 		
 	}
 
+	@Override
+	public String toString() {
+		return "|Name: " + getName() + ", > " + "  \tEmployee ID: " + getId() + ", >" + "  \tTitle: " + getSpecialty() + " " + getJob() + "|";
+	}
+
 }

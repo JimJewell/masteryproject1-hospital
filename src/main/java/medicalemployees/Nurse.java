@@ -1,38 +1,56 @@
 package medicalemployees;
 
+import java.util.ArrayList;
+
 import employeesuper.Employee;
 import hospital.Patient;
 
 public class Nurse extends Employee implements CanCareForPatient, CanDrawBlood {
 
 	String nursePay = "$50,000";
+	
 
 	public Nurse(String name, String id, String job) {
 		super(name, id, job);
-		
+
 	}
 
 	@Override
 	public String calculatePay() {
 		return nursePay;
 	}
-//	Patient p1 = new Patient("Betty", "001", 10, 5);
-//	Patient p2 = new Patient("Frank", "002", 15, 6);
-//	
-//	ArrayList<Patient> assignedPatients = new ArrayList<Patient>();
-//	assignedPatients.add(p1)
-//	assignedPatients.add(p2);
+
+	private ArrayList<Patient> shiftAssignment = new ArrayList<Patient>();
+	
+
+	public int getShiftAssignment() {
+		return shiftAssignment.size();
+	}
+
+	public void addAssignment(Patient patient) {
+		shiftAssignment.add(patient);
+	}
 
 	@Override
 	public void drawBlood(Patient patient) {
 		patient.decreaseBloodLevelByFive();
-		
+
 	}
 
 	@Override
 	public void careForPatient(Patient patient) {
-		patient.increaseHealthbyFive();
-		
-	}
-}
+		patient.healToFullHealth();
 
+	}
+	
+	@Override
+	public String toString() {
+		return "|Name: " + getName() + ", >" + "  \tEmployee ID: " + getId() + ", >" + "  \tTitle: " + getJob() + ", >" + "  \tShift Assignment: " + getShiftAssignment() + "|";
+	}
+
+//	It has beaten me for now
+//	public void careForAllAssignedPatients(ArrayList<Patient> shiftAssignment) {
+//		(ArrayList<Patient>).getShiftAssignment.healToFullHealth();
+		
+	
+}

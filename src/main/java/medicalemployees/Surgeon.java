@@ -44,6 +44,12 @@ public class Surgeon extends Employee implements CanDrawBlood {
 		
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "|Name: " + getName() + ", >" + "  \tEmployee ID: " + getId() + ", >" + "  \tTitle: " + getSpecialty() + " " + getJob() + ", >" + "  \tPerforming Surgery: " + getPerformingSurgery() + "|";
+	}
+
 	
 		
 

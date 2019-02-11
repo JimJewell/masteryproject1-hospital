@@ -27,12 +27,12 @@ public abstract class Employee {
 	public abstract String calculatePay();{
 		
 	}
-
-	public String toString() {
-		return id;
-		
+	public void tick() {
+		return;
 	}
 
+	public abstract String toString();
 
 	
 	}
+

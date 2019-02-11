@@ -1,5 +1,7 @@
 package nonmedicalemployee;
 
+import hospital.Hospital;
+
 public interface CanSweep {
-	public void sweep();
+	public void sweep(Hospital hospital);
 }

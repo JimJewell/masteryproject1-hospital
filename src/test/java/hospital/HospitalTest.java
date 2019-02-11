@@ -15,21 +15,21 @@ public class HospitalTest {
 
 	@Before
 	public void setup() {
-		underTest = new Hospital();
+		underTest = new Hospital(85);
 		person = new Patient("Sam", "001", 10, 5);
 		employee = new Doctor("Dr Happy", "145", "Doctor", "Neurology");
 	}
 	@Test
 	public void shouldKnowCleanliness() {
 		int cleanlinessPrior = underTest.getCleanliness();
-		underTest.dirtyHospital(5);
+		underTest.hospitalGettingDirty();
 //		underTest.sanitizeHospital();
 		int cleanlinessAfter = underTest.getCleanliness();
 		assertEquals(cleanlinessPrior - 10, cleanlinessAfter);
 	}
 	@Test
 	public void shouldSanitize() {
-		underTest.dirtyHospital(10);
+		underTest.hospitalGettingDirty();
 		underTest.sanitizeHospital();
 		int cleanlinessAfter = underTest.getCleanliness();
 		assertEquals(100, cleanlinessAfter);
