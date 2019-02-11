@@ -1,9 +1,11 @@
-package hospital;
+package medicalemployeetest;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import medicalemployees.Doctor;
 
 public class DoctorTest {
 
@@ -11,7 +13,7 @@ public class DoctorTest {
 
 	@Before
 	public void setup() {
-		underTest = new Doctor("Dr. Joe", "121", "Cardiac");
+		underTest = new Doctor("Dr. Joe", "121", "Cardiac", "Doctor");
 	}
 	@Test
 	public void shouldHaveSpecialty() {

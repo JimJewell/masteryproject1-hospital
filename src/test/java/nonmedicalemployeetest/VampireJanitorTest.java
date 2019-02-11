@@ -1,9 +1,12 @@
-package hospital;
+package nonmedicalemployeetest;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import hospital.Patient;
+import nonmedicalemployee.VampireJanitor;
 
 public class VampireJanitorTest {
 
@@ -12,7 +15,7 @@ public class VampireJanitorTest {
 
 	@Before
 	public void setup() {
-		underTest = new VampireJanitor("Count", "666");
+		underTest = new VampireJanitor("Count", "666", "Vampire Janitor", false);
 
 	}
 

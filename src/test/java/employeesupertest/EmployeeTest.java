@@ -1,9 +1,12 @@
-package hospital;
+package employeesupertest;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import employeesuper.Employee;
+import medicalemployees.Surgeon;
 
 public class EmployeeTest {
 
@@ -11,13 +14,13 @@ public class EmployeeTest {
 
 	@Before
 	public void setup() {
-		underTest = new Surgeon("Jack", "123", false);
+		underTest = new Surgeon("Dr. Facelift", "123", "Plastic", "Surgeon", false);
 	}
 
 	@Test
 	public void shouldHaveName() {
 		String actual = underTest.getName();
-		assertEquals("Jack", actual);
+		assertEquals("Dr. Facelift", actual);
 	}
 
 	@Test
@@ -25,4 +28,11 @@ public class EmployeeTest {
 		String actual = underTest.getId();
 		assertEquals("123", actual);
 	}
-}
+	@Test 
+	public void shouldHaveJob() {
+		String actual = underTest.getJob();
+		assertEquals("Surgeon", actual);
+	}
+		
+		
+		}

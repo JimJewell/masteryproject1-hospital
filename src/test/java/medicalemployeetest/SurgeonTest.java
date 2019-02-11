@@ -1,4 +1,4 @@
-package hospital;
+package medicalemployeetest;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -7,13 +7,15 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import medicalemployees.Surgeon;
+
 public class SurgeonTest {
 
 Surgeon underTest;
 	
 	@Before
 	public void setup() {
-		underTest = new Surgeon("Dr. Claw", "123", false);
+		underTest = new Surgeon("Dr. Claw", "123", "Cardiac", "Surgeon", false);
 	}
 //	@Test
 //	public void shouldPerformSurgery() {
@@ -41,6 +43,11 @@ Surgeon underTest;
 		underTest.toggleSurgery();
 		boolean surgery = underTest.getPerformingSurgery();
 		assertFalse(surgery);
+	}
+	@Test
+	public void hasASpecialty() {
+		String actual = underTest.getSpecialty();
+		assertEquals("Cardiac Surgeon", actual);
 	}
 	}
 	

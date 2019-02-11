@@ -1,4 +1,4 @@
-package hospital;
+package nonmedicalemployeetest;
 
 public class JanitorTest {
 

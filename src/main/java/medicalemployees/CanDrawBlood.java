@@ -1,4 +1,6 @@
-package hospital;
+package medicalemployees;
+
+import hospital.Patient;
 
 public interface CanDrawBlood {
 	
