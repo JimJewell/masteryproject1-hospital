@@ -71,7 +71,6 @@ public class Application {
 		System.out.println(
 				"....................................................................................................................");
 
-
 		boolean MainMenu = true;
 
 		while (MainMenu) {
@@ -80,11 +79,11 @@ public class Application {
 
 			System.out.println("1. Review Employee Records ");
 			System.out.println("2. Review Hospital Patient Census");
-//			System.out.println("3. Provide Care for a Patient");
+			System.out.println("3. Provide Care for a Patient");
 			System.out.println("4. Provide Care for All Patients");
 			System.out.println("5. Instruct Custodial Services to Clean Hospital");
-//			System.out.println("6. Process Patient Admission");    For Future release date.
-//			System.out.println("7. Place a Hospital Employee on Leave of Absence");
+			System.out.println("6. Process Patient Admission");   // For Future release date.
+			System.out.println("7. Place a Hospital Employee on Leave of Absence");
 
 			String mainMenuSelection = input.nextLine();
 
@@ -106,7 +105,7 @@ public class Application {
 				highStMercy.returnAllPatients();
 				System.out.println("You are a natural born healer!");
 				break;
-				
+
 			case "5":
 				j1.toggleSweeping();
 				j1.sweep(highStMercy);
@@ -114,48 +113,46 @@ public class Application {
 				System.out.println(j1.getName() + " is cleaning " + j1.getIsSweeping());
 				System.out.println("Hospital cleanliness: " + highStMercy.getCleanliness() + "%");
 				break;
-				
-			
-//			case "3":
-//				
-//				boolean individualCareMenu = true;
-//				while (individualCareMenu) {
-//					System.out.println("Who would you like to care for?");
-//					highStMercy.getPatientNames();
-//					
-//					String patientSelected = input.nextLine();
-//					Patient patientChoice = highStMercy.getPatient(patientSelected);
-//					System.out.println(patientChoice.getPatientID() + " is ready to receive care.  What care will you perform?");
-//				
-//					System.out.println("1. Provide Care for " + patientChoice.getPatientName());
-//					System.out.println("2. Take a blood sample from " + patientChoice.getPatientName());
-//					System.out.println("You can return to the main menu at any time by typing \"Exit\"");
-//					
-//					String individualCareMenuSelection = input.nextLine().toLowerCase();
-//				
-//					
-//					switch (individualCareMenuSelection) {
-//					
-//					case "1":
-//						patientChoice.healToFullHealth();
-//						System.out.println(patientChoice.getPatientName() + "thanks you for your care.");
-//						System.out.println(patientChoice.getHealthLevel());
-//						break;
-//					case "2":
-//						patientChoice.decreaseBloodLevelByFive();
-//						System.out.println(patientChoice.getPatientName() + "says, how much blood did you take? I'm going to pass out.");
-//						System.out.println(patientChoice.getBloodLevel());
-//						break;
-//					case "exit": 
-//						individualCareMenu = false;
-////						System.out.println("Thank goodness you are no longer trying to care for individual patients!");
-//						break;
-//				
-//					}	
-//				}
-			}
-				
 
+			case "3":
+
+				boolean individualCareMenu = true;
+				while (individualCareMenu) {
+					System.out.println("Who would you like to care for?");
+					highStMercy.getPatientNames();
+
+					String patientSelected = input.nextLine();
+					Patient patientChoice = highStMercy.getPatient(patientSelected);
+					System.out.println(
+							patientChoice.getPatientID() + " is ready to receive care.  What care will you perform?");
+
+					System.out.println("1. Provide Care for " + patientChoice.getPatientName());
+					System.out.println("2. Take a blood sample from " + patientChoice.getPatientName());
+					System.out.println("You can return to the main menu at any time by typing \"Exit\"");
+
+					String individualCareMenuSelection = input.nextLine().toLowerCase();
+
+					switch (individualCareMenuSelection) {
+
+					case "1":
+						patientChoice.healToFullHealth();
+						System.out.println(patientChoice.getPatientName() + "thanks you for your care.");
+						System.out.println(patientChoice.getHealthLevel());
+						break;
+					case "2":
+						patientChoice.decreaseBloodLevelByFive();
+						System.out.println(patientChoice.getPatientName()
+								+ "says, how much blood did you take? I'm going to pass out.");
+						System.out.println(patientChoice.getBloodLevel());
+						break;
+					case "exit":
+						individualCareMenu = false;
+						System.out.println("Thank goodness you are no longer trying to care for individual patients!");
+						break;
+
+					}
+				}
+			}
 
 //		Surgeon jerry = new Surgeon("Jerry", "888", "Plastic", "Surgeon", false);
 //		Nurse n1 = new Nurse("Sunshine", "444" , "RN");
